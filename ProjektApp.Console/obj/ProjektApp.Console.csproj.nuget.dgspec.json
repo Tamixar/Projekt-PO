@@ -1,0 +1,364 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.Console\\ProjektApp.Console.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.DataAccess.Memory\\ProjectApp.DataAccess.Memory.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.DataAccess.Memory\\ProjectApp.DataAccess.Memory.csproj",
+        "projectName": "ProjectApp.DataAccess.Memory",
+        "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.DataAccess.Memory\\ProjectApp.DataAccess.Memory.csproj",
+        "packagesPath": "C:\\Users\\Tamixar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.DataAccess.Memory\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Tamixar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj": {
+                "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.Service.Memory\\ProjectApp.Service.Memory.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.Service.Memory\\ProjectApp.Service.Memory.csproj",
+        "projectName": "ProjectApp.Service.Memory",
+        "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.Service.Memory\\ProjectApp.Service.Memory.csproj",
+        "packagesPath": "C:\\Users\\Tamixar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.Service.Memory\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Tamixar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.DataAccess.Memory\\ProjectApp.DataAccess.Memory.csproj": {
+                "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.DataAccess.Memory\\ProjectApp.DataAccess.Memory.csproj"
+              },
+              "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.ServiceAbstractions\\ProjectApp.ServiceAbstractions.csproj": {
+                "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.ServiceAbstractions\\ProjectApp.ServiceAbstractions.csproj"
+              },
+              "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj": {
+                "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.ServiceAbstractions\\ProjectApp.ServiceAbstractions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.ServiceAbstractions\\ProjectApp.ServiceAbstractions.csproj",
+        "projectName": "ProjectApp.ServiceAbstractions",
+        "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.ServiceAbstractions\\ProjectApp.ServiceAbstractions.csproj",
+        "packagesPath": "C:\\Users\\Tamixar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.ServiceAbstractions\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Tamixar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj": {
+                "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.Console\\ProjektApp.Console.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.Console\\ProjektApp.Console.csproj",
+        "projectName": "ProjektApp.Console",
+        "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.Console\\ProjektApp.Console.csproj",
+        "packagesPath": "C:\\Users\\Tamixar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.Console\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Tamixar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.DataAccess.Memory\\ProjectApp.DataAccess.Memory.csproj": {
+                "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.DataAccess.Memory\\ProjectApp.DataAccess.Memory.csproj"
+              },
+              "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.Service.Memory\\ProjectApp.Service.Memory.csproj": {
+                "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.Service.Memory\\ProjectApp.Service.Memory.csproj"
+              },
+              "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.ServiceAbstractions\\ProjectApp.ServiceAbstractions.csproj": {
+                "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.ServiceAbstractions\\ProjectApp.ServiceAbstractions.csproj"
+              },
+              "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj": {
+                "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj",
+        "projectName": "ProjektApp.DataModel",
+        "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj",
+        "packagesPath": "C:\\Users\\Tamixar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.DataModel\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Tamixar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
