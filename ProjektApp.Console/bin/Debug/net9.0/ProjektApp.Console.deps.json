@@ -1,0 +1,92 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "ProjektApp.Console/1.0.0": {
+        "dependencies": {
+          "ProjectApp.DataAccess.Memory": "1.0.0",
+          "ProjectApp.Service.Memory": "1.0.0",
+          "ProjectApp.ServiceAbstractions": "1.0.0",
+          "ProjektApp.DataModel": "1.0.0"
+        },
+        "runtime": {
+          "ProjektApp.Console.dll": {}
+        }
+      },
+      "ProjectApp.DataAccess.Memory/1.0.0": {
+        "dependencies": {
+          "ProjektApp.DataModel": "1.0.0"
+        },
+        "runtime": {
+          "ProjectApp.DataAccess.Memory.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ProjectApp.Service.Memory/1.0.0": {
+        "dependencies": {
+          "ProjectApp.DataAccess.Memory": "1.0.0",
+          "ProjectApp.ServiceAbstractions": "1.0.0",
+          "ProjektApp.DataModel": "1.0.0"
+        },
+        "runtime": {
+          "ProjectApp.Service.Memory.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ProjectApp.ServiceAbstractions/1.0.0": {
+        "dependencies": {
+          "ProjektApp.DataModel": "1.0.0"
+        },
+        "runtime": {
+          "ProjectApp.ServiceAbstractions.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ProjektApp.DataModel/1.0.0": {
+        "runtime": {
+          "ProjektApp.DataModel.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ProjektApp.Console/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProjectApp.DataAccess.Memory/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProjectApp.Service.Memory/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProjectApp.ServiceAbstractions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProjektApp.DataModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

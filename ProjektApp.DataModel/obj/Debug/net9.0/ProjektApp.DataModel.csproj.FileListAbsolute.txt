@@ -1,0 +1,12 @@
+C:\Users\Tamixar\source\repos\Projekt-PO\ProjektApp.DataModel\bin\Debug\net9.0\ProjektApp.DataModel.deps.json
+C:\Users\Tamixar\source\repos\Projekt-PO\ProjektApp.DataModel\bin\Debug\net9.0\ProjektApp.DataModel.dll
+C:\Users\Tamixar\source\repos\Projekt-PO\ProjektApp.DataModel\bin\Debug\net9.0\ProjektApp.DataModel.pdb
+C:\Users\Tamixar\source\repos\Projekt-PO\ProjektApp.DataModel\obj\Debug\net9.0\ProjektApp.DataModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tamixar\source\repos\Projekt-PO\ProjektApp.DataModel\obj\Debug\net9.0\ProjektApp.DataModel.AssemblyInfoInputs.cache
+C:\Users\Tamixar\source\repos\Projekt-PO\ProjektApp.DataModel\obj\Debug\net9.0\ProjektApp.DataModel.AssemblyInfo.cs
+C:\Users\Tamixar\source\repos\Projekt-PO\ProjektApp.DataModel\obj\Debug\net9.0\ProjektApp.DataModel.csproj.CoreCompileInputs.cache
+C:\Users\Tamixar\source\repos\Projekt-PO\ProjektApp.DataModel\obj\Debug\net9.0\ProjektApp.DataModel.sourcelink.json
+C:\Users\Tamixar\source\repos\Projekt-PO\ProjektApp.DataModel\obj\Debug\net9.0\ProjektApp.DataModel.dll
+C:\Users\Tamixar\source\repos\Projekt-PO\ProjektApp.DataModel\obj\Debug\net9.0\refint\ProjektApp.DataModel.dll
+C:\Users\Tamixar\source\repos\Projekt-PO\ProjektApp.DataModel\obj\Debug\net9.0\ProjektApp.DataModel.pdb
+C:\Users\Tamixar\source\repos\Projekt-PO\ProjektApp.DataModel\obj\Debug\net9.0\ref\ProjektApp.DataModel.dll

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "ProjektApp.DataModel/1.0.0": {
+        "runtime": {
+          "ProjektApp.DataModel.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ProjektApp.DataModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

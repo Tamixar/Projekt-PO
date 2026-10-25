@@ -25,20 +25,27 @@
 
     }
 
+    public class Zamowienie
+    {
+        public int Id { get; set; }
+        public DateTime DataZamowienia { get; set; }
+        public decimal WartoscCalkowita { get; set; }
+        public Dictionary<Towar, int> Pozycje { get; set; } = new Dictionary<Towar, int>();
+    }
+
 
     public class Klient : Uzytkownik
     {
-        public DateTime Rezerwacje { get; set; }
-        public List<string> Zamowienia { get; set; } = new List<string>();
+        public List<Sesja> Rezerwacje { get; set; } = new List<Sesja>();
+        public List<Zamowienie> Zamowienia { get; set; } = new List<Zamowienie>();
 
         public Koszyk Koszyk { get; set; }
-        public Koszyk Ulubione { get; set; } 
+        public List<Towar> Ulubione { get; set; } = new List<Towar>();
 
         public Klient(string imie, string nazwisko, string email, string haslo)
             : base(imie, nazwisko, email, haslo)
         {
             Koszyk = new Koszyk(this);
-            Ulubione = new Koszyk(this);
         }
 
         public void DodajDoKoszyka(Towar produkt, int ilosc)
@@ -59,10 +66,19 @@
                     throw new InvalidOperationException($"Brak towaru: {element.Key.Nazwa}");
             }
 
+            Zamowienie noweZamowienie = new Zamowienie
+            {
+                DataZamowienia = DateTime.Now,
+                WartoscCalkowita = Koszyk.WartoscCalkowita,
+                Pozycje = new Dictionary<Towar, int>(Koszyk.Zawartosc)
+            };
+            Zamowienia.Add(noweZamowienie);
+
             foreach (var element in Koszyk.Zawartosc)
             {
                 element.Key.StanMagazynowy -= element.Value;
             }
+
             Koszyk.Zawartosc.Clear();
             Koszyk.WartoscCalkowita = 0;
         }
@@ -95,7 +111,7 @@
     public class MG : Pracownik
     {
         public List<string>? Systemy { get; set; } = new List<string>();
-        private double? Bonus { get; set; }
+        private decimal? Bonus { get; set; }
 
         public MG(string imie, string nazwisko, string email, string haslo, string stanowisko)
             : base(imie, nazwisko, email, haslo, stanowisko) { }
@@ -123,7 +139,7 @@
     {
         public Klient? Wlasciciel { get; private set; }
         public Dictionary<Towar, int> Zawartosc { get; set; } = new Dictionary<Towar, int>();
-        public double? WartoscCalkowita { get; set; }
+        public decimal WartoscCalkowita { get; set; }
 
         public Koszyk(Klient wlasciciel)
         {
@@ -167,9 +183,9 @@
 
     public abstract class Towar
     {
-        public int? Id { get; set; }
+        public int Id { get; set; }
         public string? Nazwa { get; set; }
-        public double? Cena { get; set; }
+        public decimal? Cena { get; set; }
         public int? StanMagazynowy { get; set; }
         public string? Producent { get; set; }
 
@@ -186,15 +202,15 @@
             }
 
         }
-        public double Wartosc(int ilosc)
+        public decimal Wartosc(int ilosc)
         {
             if (Cena != null)
             {
-                return (double)(Cena * ilosc);
+                return (decimal)(Cena * ilosc);
             }
             else
             {
-                return 0.0;
+                return 0;
             }
         }
     }
