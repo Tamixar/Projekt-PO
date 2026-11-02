@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProjectApp.DataAccess.Memory\ProjectApp.DataAccess.Memory.csproj" />
-    <ProjectReference Include="..\ProjectApp.Service.Memory\ProjectApp.Service.Memory.csproj" />
+    <ProjectReference Include="..\ProjectApp.Service.Memory\ProjectApp.Services.csproj" />
     <ProjectReference Include="..\ProjectApp.ServiceAbstractions\ProjectApp.ServiceAbstractions.csproj" />
     <ProjectReference Include="..\ProjektApp.DataModel\ProjektApp.DataModel.csproj" />
   </ItemGroup>

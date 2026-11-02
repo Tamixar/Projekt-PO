@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjektApp.DataModel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d33ad3f86bf6f01e276976997a6c03a7c1bcf64e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d06a950e0683efd846274793592b0d70a3c4c780")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjektApp.DataModel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjektApp.DataModel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

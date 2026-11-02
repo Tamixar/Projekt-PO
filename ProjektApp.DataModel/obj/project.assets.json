@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj",
+      "projectUniqueName": "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj",
       "projectName": "ProjektApp.DataModel",
-      "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj",
+      "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj",
       "packagesPath": "C:\\Users\\Tamixar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.DataModel\\obj\\",
+      "outputPath": "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjektApp.DataModel\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -2,10 +2,24 @@
   "version": 3,
   "targets": {
     "net9.0": {
+      "ProjectApp.Abstractions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ProjektApp.DataModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProjectApp.Abstractions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProjectApp.Abstractions.dll": {}
+        }
+      },
       "ProjectApp.DataAccess.Memory/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "ProjectApp.Abstractions": "1.0.0",
           "ProjektApp.DataModel": "1.0.0"
         },
         "compile": {
@@ -13,21 +27,6 @@
         },
         "runtime": {
           "bin/placeholder/ProjectApp.DataAccess.Memory.dll": {}
-        }
-      },
-      "ProjectApp.Service.Memory/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "ProjectApp.DataAccess.Memory": "1.0.0",
-          "ProjectApp.ServiceAbstractions": "1.0.0",
-          "ProjektApp.DataModel": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/ProjectApp.Service.Memory.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ProjectApp.Service.Memory.dll": {}
         }
       },
       "ProjectApp.ServiceAbstractions/1.0.0": {
@@ -43,6 +42,22 @@
           "bin/placeholder/ProjectApp.ServiceAbstractions.dll": {}
         }
       },
+      "ProjectApp.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ProjectApp.Abstractions": "1.0.0",
+          "ProjectApp.DataAccess.Memory": "1.0.0",
+          "ProjectApp.ServiceAbstractions": "1.0.0",
+          "ProjektApp.DataModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProjectApp.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProjectApp.Services.dll": {}
+        }
+      },
       "ProjektApp.DataModel/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -56,20 +71,25 @@
     }
   },
   "libraries": {
+    "ProjectApp.Abstractions/1.0.0": {
+      "type": "project",
+      "path": "../ProjectAppAbstractions/ProjectApp.Abstractions.csproj",
+      "msbuildProject": "../ProjectAppAbstractions/ProjectApp.Abstractions.csproj"
+    },
     "ProjectApp.DataAccess.Memory/1.0.0": {
       "type": "project",
       "path": "../ProjectApp.DataAccess.Memory/ProjectApp.DataAccess.Memory.csproj",
       "msbuildProject": "../ProjectApp.DataAccess.Memory/ProjectApp.DataAccess.Memory.csproj"
     },
-    "ProjectApp.Service.Memory/1.0.0": {
-      "type": "project",
-      "path": "../ProjectApp.Service.Memory/ProjectApp.Service.Memory.csproj",
-      "msbuildProject": "../ProjectApp.Service.Memory/ProjectApp.Service.Memory.csproj"
-    },
     "ProjectApp.ServiceAbstractions/1.0.0": {
       "type": "project",
       "path": "../ProjectApp.ServiceAbstractions/ProjectApp.ServiceAbstractions.csproj",
       "msbuildProject": "../ProjectApp.ServiceAbstractions/ProjectApp.ServiceAbstractions.csproj"
+    },
+    "ProjectApp.Services/1.0.0": {
+      "type": "project",
+      "path": "../ProjectApp.Service.Memory/ProjectApp.Services.csproj",
+      "msbuildProject": "../ProjectApp.Service.Memory/ProjectApp.Services.csproj"
     },
     "ProjektApp.DataModel/1.0.0": {
       "type": "project",
@@ -80,8 +100,8 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "ProjectApp.DataAccess.Memory >= 1.0.0",
-      "ProjectApp.Service.Memory >= 1.0.0",
       "ProjectApp.ServiceAbstractions >= 1.0.0",
+      "ProjectApp.Services >= 1.0.0",
       "ProjektApp.DataModel >= 1.0.0"
     ]
   },
@@ -92,11 +112,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.Console\\ProjektApp.Console.csproj",
+      "projectUniqueName": "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjektApp.Console\\ProjektApp.Console.csproj",
       "projectName": "ProjektApp.Console",
-      "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.Console\\ProjektApp.Console.csproj",
+      "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjektApp.Console\\ProjektApp.Console.csproj",
       "packagesPath": "C:\\Users\\Tamixar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.Console\\obj\\",
+      "outputPath": "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjektApp.Console\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -117,17 +137,17 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.DataAccess.Memory\\ProjectApp.DataAccess.Memory.csproj": {
-              "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.DataAccess.Memory\\ProjectApp.DataAccess.Memory.csproj"
+            "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjectApp.DataAccess.Memory\\ProjectApp.DataAccess.Memory.csproj": {
+              "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjectApp.DataAccess.Memory\\ProjectApp.DataAccess.Memory.csproj"
             },
-            "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.Service.Memory\\ProjectApp.Service.Memory.csproj": {
-              "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.Service.Memory\\ProjectApp.Service.Memory.csproj"
+            "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjectApp.Service.Memory\\ProjectApp.Services.csproj": {
+              "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjectApp.Service.Memory\\ProjectApp.Services.csproj"
             },
-            "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.ServiceAbstractions\\ProjectApp.ServiceAbstractions.csproj": {
-              "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.ServiceAbstractions\\ProjectApp.ServiceAbstractions.csproj"
+            "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjectApp.ServiceAbstractions\\ProjectApp.ServiceAbstractions.csproj": {
+              "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjectApp.ServiceAbstractions\\ProjectApp.ServiceAbstractions.csproj"
             },
-            "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj": {
-              "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj"
+            "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj": {
+              "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj"
             }
           }
         }
