@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net9.0": {
+      "ProjectApp.Abstractions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ProjektApp.DataModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProjectApp.Abstractions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProjectApp.Abstractions.dll": {}
+        }
+      },
       "ProjektApp.DataModel/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -15,6 +28,11 @@
     }
   },
   "libraries": {
+    "ProjectApp.Abstractions/1.0.0": {
+      "type": "project",
+      "path": "../ProjectAppAbstractions/ProjectApp.Abstractions.csproj",
+      "msbuildProject": "../ProjectAppAbstractions/ProjectApp.Abstractions.csproj"
+    },
     "ProjektApp.DataModel/1.0.0": {
       "type": "project",
       "path": "../ProjektApp.DataModel/ProjektApp.DataModel.csproj",
@@ -23,6 +41,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "ProjectApp.Abstractions >= 1.0.0",
       "ProjektApp.DataModel >= 1.0.0"
     ]
   },
@@ -33,11 +52,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.DataAccess.Memory\\ProjectApp.DataAccess.Memory.csproj",
+      "projectUniqueName": "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjectApp.DataAccess.Memory\\ProjectApp.DataAccess.Memory.csproj",
       "projectName": "ProjectApp.DataAccess.Memory",
-      "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.DataAccess.Memory\\ProjectApp.DataAccess.Memory.csproj",
+      "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjectApp.DataAccess.Memory\\ProjectApp.DataAccess.Memory.csproj",
       "packagesPath": "C:\\Users\\Tamixar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjectApp.DataAccess.Memory\\obj\\",
+      "outputPath": "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjectApp.DataAccess.Memory\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -58,8 +77,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj": {
-              "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Projekt-PO\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj"
+            "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjectAppAbstractions\\ProjectApp.Abstractions.csproj": {
+              "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjectAppAbstractions\\ProjectApp.Abstractions.csproj"
+            },
+            "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj": {
+              "projectPath": "C:\\Users\\Tamixar\\source\\repos\\Po\\ProjektApp.DataModel\\ProjektApp.DataModel.csproj"
             }
           }
         }
