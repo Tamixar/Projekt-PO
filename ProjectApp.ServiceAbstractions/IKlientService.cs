@@ -2,7 +2,6 @@ using ProjektApp.DataModel;
 
 namespace ProjectApp.ServiceAbstractions;
 
-/// <summary>Operacje aplikacyjne dotyczące klientów.</summary>
 public interface IKlientService
 {
     int UtworzKlienta(string imie, string nazwisko, string email, string haslo);
