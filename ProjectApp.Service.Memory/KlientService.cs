@@ -4,7 +4,6 @@ using ProjektApp.DataModel;
 
 namespace ProjectApp.Services;
 
-/// <summary>Implementacja usług klienta dla pamięciowego repozytorium.</summary>
 public class KlientService : IKlientService
 {
     private readonly IKlientRepository _klienci;
@@ -24,7 +23,7 @@ public class KlientService : IKlientService
         WalidujWymagane(haslo, nameof(haslo));
 
         if (EmailZajety(email))
-            throw new InvalidOperationException("Klient z takim adresem e-mail już istnieje.");
+            throw new InvalidOperationException("Klient z takim adresem e-mail juz istnieje.");
 
         var klient = new Klient(imie.Trim(), nazwisko.Trim(), email.Trim(), haslo)
         {
@@ -70,7 +69,7 @@ public class KlientService : IKlientService
         var nowyEmail = email.Trim();
         if (_klienci.Query().Any(k => k.Id != id &&
             string.Equals(k.Email, nowyEmail, StringComparison.OrdinalIgnoreCase)))
-            throw new InvalidOperationException("Klient z takim adresem e-mail już istnieje.");
+            throw new InvalidOperationException("Klient z takim adresem e-mail juz istnieje.");
 
         klient.Imie = imie.Trim();
         klient.Nazwisko = nazwisko.Trim();
@@ -95,6 +94,6 @@ public class KlientService : IKlientService
     private static void WalidujWymagane(string wartosc, string nazwa)
     {
         if (string.IsNullOrWhiteSpace(wartosc))
-            throw new ArgumentException("Wartość nie może być pusta.", nazwa);
+            throw new ArgumentException("Wartosc nie może byc pusta.", nazwa);
     }
 }
