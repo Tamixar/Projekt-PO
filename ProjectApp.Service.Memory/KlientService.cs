@@ -16,7 +16,7 @@ public class KlientService : IKlientService
         _uow = uow;
     }
 
-    public int Utworz(string imie, string nazwisko, string email, string haslo)
+    public int UtworzKlienta(string imie, string nazwisko, string email, string haslo)
     {
         WalidujWymagane(imie, nameof(imie));
         WalidujWymagane(nazwisko, nameof(nazwisko));
@@ -58,7 +58,7 @@ public class KlientService : IKlientService
         return query.OrderBy(k => k.Nazwisko).ThenBy(k => k.Imie).ToList();
     }
 
-    public bool AktualizujDane(int id, string imie, string nazwisko, string email)
+    public bool AktualizujKlienta(int id, string imie, string nazwisko, string email)
     {
         WalidujWymagane(imie, nameof(imie));
         WalidujWymagane(nazwisko, nameof(nazwisko));

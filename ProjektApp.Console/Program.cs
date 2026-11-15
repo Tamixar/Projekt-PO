@@ -16,5 +16,6 @@ IPracownikRepository pracownikRepo = new PracownikRepositoryMemory(db);
 
 IUnitOfWork uow = new UnitOfWorkMemory(db);
 
+IKlientService klientSvc = new KlientService(klientRepo, uow);
 ISklepService sklepSvc = new SklepService(graRepo, podrecznikRepo, zamowienieRepo, klientRepo, uow);
 ISesjaRpgService sesjaSvc = new SesjaRpgService(sesjaRepo, mgRepo, klientRepo, uow);
