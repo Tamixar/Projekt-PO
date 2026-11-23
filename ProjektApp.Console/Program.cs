@@ -23,9 +23,9 @@ ISesjaRpgService sesjaSvc = new SesjaRpgService(sesjaRepo, mgRepo, klientRepo, u
 IDataSeeder seeder = new DataSeeder(klientRepo, mgRepo, uow);
 SeedResult seedResult = seeder.Seed();
 
-Console.WriteLine(">>> Dane seedowane. Dostępne drużyny i gracze:");
-Console.WriteLine($"TeamAId: {seedResult.TeamAId}");
-Console.WriteLine($"TeamBId: {seedResult.TeamBId}");
-Console.WriteLine($"Player1Id: {seedResult.Player1Id}");
-Console.WriteLine($"Player2Id: {seedResult.Player2Id}");
-Console.WriteLine($"Player3Id: {seedResult.Player3Id}");
+Console.WriteLine(">>> Dane seedowane. Dostępni mistrzowie gry i klienci:");
+Console.WriteLine($"MG1Id: {seedResult.MG1Id}");
+Console.WriteLine($"MG2Id: {seedResult.MG2Id}");
+Console.WriteLine($"Klient1Id: {seedResult.Klient1Id}");
+Console.WriteLine($"Klient2Id: {seedResult.Klient2Id}");
+Console.WriteLine($"Klient3Id: {seedResult.Klient3Id}");

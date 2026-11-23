@@ -8,25 +8,22 @@ namespace ProjektApp.Tests;
 
 public class InMemoryServicesFixture
 {
-    private readonly DataSeeder _dataSeeder;
-
     public MemoryDbContext Db { get; }
-    public IPlayerService PlayerService { get; }
-    public ITeamService TeamService { get; }
+    public IKlientService KlientService { get; }
+    public IMGService MGService { get; }
 
     public InMemoryServicesFixture()
     {
         Db = new MemoryDbContext();
 
-        IKlientRepository teamRepo = new KlientRepositoryMemory(Db);
-        IMGRepository playerRepo = new MGRepositoryMemory(Db);
+        IKlientRepository klientRepository = new KlientRepositoryMemory(Db);
+        IMGRepository mgRepository = new MGRepositoryMemory(Db);
         IUnitOfWork uow = new UnitOfWorkMemory(Db);
 
-        _dataSeeder = new DataSeeder(teamRepo, playerRepo, uow);
+        IDataSeeder seeder = new DataSeeder(klientRepository, mgRepository, uow);
+        seeder.Seed();
 
-        PlayerService = new PlayerService(teamRepo, uow);
-        TeamService = new TeamService(playerRepo, uow);
-
-        _dataSeeder.Seed();
+        KlientService = new KlientService(klientRepository, uow);
+        MGService = new MGService(mgRepository);
     }
 }

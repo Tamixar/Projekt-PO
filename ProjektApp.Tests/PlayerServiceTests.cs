@@ -4,18 +4,17 @@ namespace ProjektApp.Tests;
 
 public class PlayerServiceTests : IClassFixture<InMemoryServicesFixture>
 {
-    private readonly IPlayerService _playerSvc;
+    private readonly IKlientService _klientService;
 
     public PlayerServiceTests(InMemoryServicesFixture fixture)
     {
-        _playerSvc = fixture.PlayerService;
+        _klientService = fixture.KlientService;
     }
 
     [Fact]
     public void Search_ShouldFindJanKowalski()
     {
-        var results = _playerSvc.Search("Jan");
-
-        Assert.Contains(results, p => p.FullName == "Jan Kowalski");
+        var results = _klientService.Search("Jan");
+        Assert.Contains(results, klient => klient.Imie == "Jan" && klient.Nazwisko == "Kowalski");
     }
 }

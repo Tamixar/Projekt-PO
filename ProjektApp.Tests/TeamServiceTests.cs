@@ -4,20 +4,19 @@ namespace ProjektApp.Tests;
 
 public class TeamServiceTests : IClassFixture<InMemoryServicesFixture>
 {
-    private readonly ITeamService _teamSvc;
+    private readonly IMGService _mgService;
 
     public TeamServiceTests(InMemoryServicesFixture fixture)
     {
-        _teamSvc = fixture.TeamService;
+        _mgService = fixture.MGService;
     }
 
     [Fact]
-    public void GetAll_ShouldReturnSeededTeams()
+    public void GetAll_ShouldReturnSeededGameMasters()
     {
-        var teams = _teamSvc.GetAll();
-
-        Assert.NotEmpty(teams);
-        Assert.Contains(teams, t => t.Name == "FC Demo");
-        Assert.Contains(teams, t => t.Name == "AC Sample");
+        var gameMasters = _mgService.GetAll();
+        Assert.Equal(2, gameMasters.Count);
+        Assert.Contains(gameMasters, mg => mg.Imie == "FC" && mg.Nazwisko == "Demo");
+        Assert.Contains(gameMasters, mg => mg.Imie == "AC" && mg.Nazwisko == "Sample");
     }
 }

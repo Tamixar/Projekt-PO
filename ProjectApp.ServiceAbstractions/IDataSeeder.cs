@@ -7,9 +7,9 @@ public interface IDataSeeder
 
 public sealed class SeedResult
 {
-    public Guid TeamAId { get; init; }
-    public Guid TeamBId { get; init; }
-    public Guid Player1Id { get; init; }
-    public Guid Player2Id { get; init; }
-    public Guid Player3Id { get; init; }
+    public int? MG1Id { get; init; }
+    public int? MG2Id { get; init; }
+    public int? Klient1Id { get; init; }
+    public int? Klient2Id { get; init; }
+    public int? Klient3Id { get; init; }
 }
