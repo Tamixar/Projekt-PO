@@ -10,10 +10,7 @@ public class DataSeeder : IDataSeeder
     private readonly IMGRepository _mgRepository;
     private readonly IUnitOfWork _uow;
 
-    public DataSeeder(
-        IKlientRepository klientRepository,
-        IMGRepository mgRepository,
-        IUnitOfWork uow)
+    public DataSeeder(IKlientRepository klientRepository, IMGRepository mgRepository, IUnitOfWork uow)
     {
         _klientRepository = klientRepository;
         _mgRepository = mgRepository;
@@ -22,30 +19,29 @@ public class DataSeeder : IDataSeeder
 
     public SeedResult Seed()
     {
-        var player1 = EnsurePlayer("Jan", "Kowalski", "jan.kowalski@example.com", 1);
-        var player2 = EnsurePlayer("Adam", "Nowak", "adam.nowak@example.com", 2);
-        var player3 = EnsurePlayer("Piotr", "Zieliński", "piotr.zielinski@example.com", 3);
+        var klient1 = EnsureKlient("Jan", "Kowalski", "jan.kowalski@example.com", 1);
+        var klient2 = EnsureKlient("Adam", "Nowak", "adam.nowak@example.com", 2);
+        var klient3 = EnsureKlient("Piotr", "Zieliński", "piotr.zielinski@example.com", 3);
 
-        var teamA = EnsureTeam("FC", "Demo", "fc.demo@example.com", 1);
-        var teamB = EnsureTeam("AC", "Sample", "ac.sample@example.com", 2);
+        var mg1 = EnsureMG("FC", "Demo", "fc.demo@example.com", 1);
+        var mg2 = EnsureMG("AC", "Sample", "ac.sample@example.com", 2);
 
         _uow.SaveChanges();
 
         return new SeedResult
         {
-            TeamAId = GuidFromId(teamA.Id),
-            TeamBId = GuidFromId(teamB.Id),
-            Player1Id = GuidFromId(player1.Id),
-            Player2Id = GuidFromId(player2.Id),
-            Player3Id = GuidFromId(player3.Id)
+            MG1Id = mg1.Id,
+            MG2Id = mg2.Id,
+            Klient1Id = klient1.Id,
+            Klient2Id = klient2.Id,
+            Klient3Id = klient3.Id
         };
     }
 
-    private Klient EnsurePlayer(string imie, string nazwisko, string email, int fallbackId)
+    private Klient EnsureKlient(string imie, string nazwisko, string email, int fallbackId)
     {
-        var existing = _klientRepository.Query()
-            .FirstOrDefault(k => k.Email != null && k.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
-
+        var existing = _klientRepository.Query().FirstOrDefault(k =>
+            k.Email != null && k.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
         if (existing != null)
             return existing;
 
@@ -53,43 +49,43 @@ public class DataSeeder : IDataSeeder
             ? _klientRepository.Query().Max(k => k.Id ?? 0) + 1
             : fallbackId;
 
-        var player = new Klient(imie, nazwisko, email, "Seed123!")
-        {
-            Id = nextId
-        };
-
-        _klientRepository.Add(player);
-        return player;
+        var klient = new Klient(imie, nazwisko, email, "Seed123!") { Id = nextId };
+        _klientRepository.Add(klient);
+        return klient;
     }
 
-    private MG EnsureTeam(string imie, string nazwisko, string email, int fallbackId)
+    private MG EnsureMG(string imie, string nazwisko, string email, int fallbackId)
     {
-        var existing = _mgRepository.Query()
-            .FirstOrDefault(m => m.Email != null && m.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
-
+        var existing = _mgRepository.Query().FirstOrDefault(mg =>
+            mg.Email != null && mg.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
         if (existing != null)
             return existing;
 
         var nextId = _mgRepository.Query().Any()
-            ? _mgRepository.Query().Max(m => m.Id ?? 0) + 1
+            ? _mgRepository.Query().Max(mg => mg.Id ?? 0) + 1
             : fallbackId;
 
-        var team = new MG(imie, nazwisko, email, "Seed123!", "Mistrz Gry")
+        var mg = new MG(imie, nazwisko, email, "Seed123!", "Mistrz Gry")
         {
             Id = nextId,
             Systemy = new List<string> { "D&D", "Warhammer" }
         };
-
-        _mgRepository.Add(team);
-        return team;
+        _mgRepository.Add(mg);
+        return mg;
     }
+}
 
-    private static Guid GuidFromId(int? id)
+public class MGService : IMGService
+{
+    private readonly IMGRepository _mistrzowieGry;
+
+    public MGService(IMGRepository mistrzowieGry)
     {
-        Span<byte> bytes = stackalloc byte[16];
-        bytes.Clear();
-        bytes[0] = (byte)((id ?? 0) & 0xFF);
-        bytes[1] = (byte)(((id ?? 0) >> 8) & 0xFF);
-        return new Guid(bytes);
+        _mistrzowieGry = mistrzowieGry;
     }
+
+    public IReadOnlyList<MG> GetAll() => _mistrzowieGry.Query()
+        .OrderBy(mg => mg.Nazwisko)
+        .ThenBy(mg => mg.Imie)
+        .ToList();
 }

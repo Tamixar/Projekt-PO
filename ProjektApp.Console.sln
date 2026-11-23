@@ -1,4 +1,5 @@
-﻿
+﻿microsoft visual studio solution
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35514.174
@@ -14,6 +15,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectApp.Services", "ProjectApp.Service.Memory\ProjectApp.Services.csproj", "{94BF2A66-2051-4CA4-A932-DA723B7F3A81}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectApp.Abstractions", "ProjectAppAbstractions\ProjectApp.Abstractions.csproj", "{B25BFBB7-0205-496E-8E52-7F6EDF6A1875}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjektApp.Tests", "ProjektApp.Tests\ProjektApp.Tests.csproj", "{1B2C3D4E-5F60-4718-8A90-B1C2D3E4F501}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +48,10 @@ Global
 		{B25BFBB7-0205-496E-8E52-7F6EDF6A1875}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B25BFBB7-0205-496E-8E52-7F6EDF6A1875}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B25BFBB7-0205-496E-8E52-7F6EDF6A1875}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B2C3D4E-5F60-4718-8A90-B1C2D3E4F501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B2C3D4E-5F60-4718-8A90-B1C2D3E4F501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B2C3D4E-5F60-4718-8A90-B1C2D3E4F501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B2C3D4E-5F60-4718-8A90-B1C2D3E4F501}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
