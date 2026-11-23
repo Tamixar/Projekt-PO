@@ -70,22 +70,8 @@ public class DataSeeder : IDataSeeder
             Id = nextId,
             Systemy = new List<string> { "D&D", "Warhammer" }
         };
+
         _mgRepository.Add(mg);
         return mg;
     }
-}
-
-public class MGService : IMGService
-{
-    private readonly IMGRepository _mistrzowieGry;
-
-    public MGService(IMGRepository mistrzowieGry)
-    {
-        _mistrzowieGry = mistrzowieGry;
-    }
-
-    public IReadOnlyList<MG> GetAll() => _mistrzowieGry.Query()
-        .OrderBy(mg => mg.Nazwisko)
-        .ThenBy(mg => mg.Imie)
-        .ToList();
 }

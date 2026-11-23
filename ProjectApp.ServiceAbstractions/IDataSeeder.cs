@@ -13,8 +13,3 @@ public sealed class SeedResult
     public int? Klient2Id { get; init; }
     public int? Klient3Id { get; init; }
 }
-
-public interface IMGService
-{
-    IReadOnlyList<ProjektApp.DataModel.MG> GetAll();
-}
